@@ -10,6 +10,7 @@ coverage/
 
 # Production builds
 build/
+assets/
 
 # Environment files
 .env
