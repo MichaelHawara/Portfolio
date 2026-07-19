@@ -1,0 +1,76 @@
+.card {
+    --stale-width: 250px;
+    --expanded-width: 500px;
+    display: grid;
+    border: 2px solid;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: var(--stale-width);
+    height: 350px;
+    background-color: #2f4f4f;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.card:hover {
+    width: var(--expanded-width);
+    transform: scale(1.1);
+    position:absolute;
+    z-index: 100;
+}
+
+.proj-title {
+    position: relative;
+    color: lightseagreen;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.proj-link {
+    color: lightseagreen;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.proj-link:hover {
+    text-decoration: underline;
+}
+
+.video-container {
+    margin: auto;
+    width: 90%;
+    max-height: 140px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .project-video {
+    opacity: 1;
+}
+
+.description {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .description {
+    opacity: 1;
+}

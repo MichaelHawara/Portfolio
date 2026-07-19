@@ -1,0 +1,78 @@
+:root {
+  --page-bg: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  /* Warm off-white with transparency */
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--page-bg);
+}
+
+.App {
+  text-align: center;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  margin-left: 60px;
+  padding-left: 40px;
+  padding-top: 20px;
+  width: calc(100% - 60px);
+  background: var(--page-bg);
+
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+main {
+  position: relative;
+  left: calc(var(--menu-width) + 20px);
+  width: calc(100% - (var(--menu-width) + 20px));
+  transition: 0.3s;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.collapsed main {
+  left: calc(var(--collapsed-width));
+  width: calc(100% - (var(--collapsed-width) + 20px));
+}
+
+p {
+  color: rgb(1, 56, 1);
+  font-size: 20px;
+}
+
+h3 {
+  color: darkslategrey;
+  padding: 0;
+}
+
+.subsection {
+  font-size: 24;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.info {
+  margin-top: 0px;
+  margin-right: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(50px) saturate(200%);
+  backdrop-filter: blur(50px) saturate(180%);
+}
